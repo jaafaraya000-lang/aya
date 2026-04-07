@@ -1,95 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aya Jaafar</title>
-    <link rel="icon" type="image/jpg" href="images/aya.jpg">
-    <link rel="stylesheet" href="styles.css"> 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Aya Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+section {
+    display: none;
+    padding: 60px;
+}
+
+section.active {
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    padding: 15px;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+}
+</style>
+
 </head>
+
 <body>
-    <header>
+
 <nav class="navigation">
+    <h2 class="logo">Aya</h2>
     <ul>
-        <li><a href="#AboutMe">About Me</a></li>
-        <li><a href="#ContactMe">Contact me</a></li>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('AboutMe')">About</a></li>
+        <li><a href="#" onclick="showSection('Skills')">Skills</a></li>
+        <li><a href="#" onclick="showSection('Works')">Works</a></li>
+        <li><a href="#" onclick="showSection('ContactMe')">Contact</a></li>
     </ul>
 </nav>
-    </header>
-    <hr>
-    <section class="hero">
-    <img class="arrow" src="images/flower.png" alt="arrow">
 
-        <div class="heroSub"> 
-        <h1 class="name"> My name is Aya Jaafar </h1>
-        <h1 class="title">I am a web designer & developer in making</h1>
-        <div  class="heroBtns" >
-         <a class="hireMe" href="#ContactMe">Contact Me</a>
-        </div>
-        </div>
+<!-- HOME -->
+<section id="home" class="active hero">
+    <h1>Hi, I'm Aya JAAFAR <br> Web Designer & Future Developer</h1>
+    <br>
+    <button onclick="showSection('ContactMe')">Contact Me</button>
+</section>
 
-    </section>
+<!-- ABOUT -->
+<section id="AboutMe">
+    <h2>About Me</h2>
+    <p>
+    My name is Aya JAAFAR, I'm 18 years old, and I'm a passionate Graphic designer learning Web Development.
+    </p>
+</section>
 
-    <section class="AboutMe" id="AboutMe">
-    <img 
-    src="images/flower2.png"
-    alt="aboutMe image"
-    class="aboutMeImg" >
-    <div class="classContainer">
-<div class="textTitle">
-    <h1 class="aboutName">About</h1>
-    <h1 class="aboutTitle">me</h1>
-</div>
-<p class="aboutMePar">
-    My name is Aya, I’m 17 years old, and I’m a passionate Graphic Designer currently learning Web Development. I love exploring creative ideas and turning them into visually appealing designs. My goal is to combine my design skills with web development to create engaging and interactive digital experiences. I enjoy experimenting with colors, typography, and layouts, and I’m always eager to learn new tools and techniques. Every project I work on is an opportunity to challenge myself, improve my skills, and bring unique ideas to life.
-</p>
-    </div>
-    </section>
-    <section class="contactContainner" id="ContactMe">
-        <div class="contactTitle">
-            <h1 class="aboutName">Contact</h1>
-            <h1 class="aboutTitle">me</h1>
+<!-- SKILLS -->
+<section id="Skills">
+    <h2>My Skills</h2>
+    <div>Graphic Design</div>
+    <div>Web Development</div>
+    <div>Content Creation</div>
+</section>
 
-        </div>
-    <div class="contact"> 
-        <div class="emailAndPhone">
-            <img src="images/email.png" alt="email logo"
-            height="50px"
-            width="50px"/>
-            <a href="mailto:ayajaafar182008@icloud.com">
-            <h3>ayajaafar182008@icloud.com</h3>
-            </a>
-        </div>
-        <div class="emailAndPhone">
-        <img src="images/phone.png" alt="phone logo"
-        height="50px"
-        width="50px"/>
-        <h3>+212720831422</h3>
-        </div>
-    </div>
+<!-- WORKS -->
+<section id="Works">
+    <h2>My Works</h2>
+    <img src="images/baskrtball.jpg" width="200">
+    <img src="images/bugatti.jpg" width="200">
+    <img src="images/resteau.jpg" width="200">
+</section>
 
-        <div class="socialMedia">
-            <a href="https://www.instagram.com/jaafa.yaa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <img src="images/insta.png" alt="my imstagram account"
-                height="50px"
-                width="50px">
-            </a>
-        <a href="https://www.tiktok.com/@ayaa.jaf?_t=ZS-8zU3Zz4rmfY&_r=1">
-            <img src="images/tiik.png" alt="my tiktok account"
-            height="50px"
-            width="50px">
-        </a>
+<!-- CONTACT -->
+<section id="ContactMe">
+    <h2>Contact Me</h2>
 
-        </div>
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required><br><br>
+        <input type="email" placeholder="Your Email" required><br><br>
+        <textarea placeholder="Your Message" required></textarea><br><br>
+        <button type="submit">Send</button>
+    </form>
 
-    </section>
-    <hr>
-<footer>
-    <p>Built by Aya Jaafar</p>
-</footer>
+    <p id="msg"></p>
+</section>
+
+<script>
+function showSection(id) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+
+    document.getElementById(id).classList.add("active");
+}
+
+function sendMessage(e) {
+    e.preventDefault();
+    document.getElementById("msg").innerText = "Message sent!";
+}
+</script>
 
 </body>
 </html>

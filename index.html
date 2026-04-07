@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="style.css">
+  <ul id="menu"></ul>
+  <title>Aya JAAFAR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <nav class="navigation">
+        <h2 class="logo">Aya</h2>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <ul id="menu">
+            <li><a href="#AboutMe">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Works">Works</a></li>
+            <li><a href="#ContactMe">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <div class="hero-text">
+        <h1 class="fade-in">
+            Hi, I'm Aya JAAFAR <br>
+            Web Designer & Future Developer
+        </h1>
+
+        <br><br>
+
+        <a href="#ContactMe" class="btn fade-in">Contact Me</a>
+    </div>
+
+    <div class="hero-image fade-in">
+        <img src="images/me offic.jpg" alt="Aya">
+    </div>
+</section>
+
+
+
+<section id="AboutMe" class="AboutMe fade-in">
+    <img src="images/2pro.jpg" alt="Aya">
+    <div>
+        <h2>About Me</h2>
+        <p>
+           My name is Aya JAAFAR, I'm 18 years old, and I'm a passionate Graphic designer currently learning Web Developmen. I love exploring creative ideas and turning them into visually appealing designs. My goal is to combine my design skills with web development to create engaging and interactive digital experiences.
+        </p>
+    </div>
+</section>
+
+
+<section id="Skills" class="Skills fade-in">
+    <h2>My Skills</h2>
+    <br>
+    <div class="cards">  
+        <div class="card">
+            <h3>Graphic Design</h3>
+            <p class="p1">I create unique and professional designs, including logos, posters, and branding materials, to make your ideas stand out and leave a lasting impression.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p class="p1">I build responsive and user-friendly websites that combine modern design with functionality, ensuring a smooth and engaging experience for every visitor.</p>
+        </div>
+
+        <div class="card">
+            <h3>Content Creation</h3>
+            <p class="p1">I design engaging digital content for social media and online platforms, helping brands connect with their audience and grow their online presence.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="Works" class="Works fade-in">
+    <h2>My Works</h2>
+
+    <div class="gallery">
+        <img src="images/baskrtball.jpg">
+        <img src="images/bugatti.jpg">
+        <img src="images/resteau.jpg">
+    </div>
+</section>
+
+
+
+<section id="ContactMe" class="Contact fade-in">
+    <h2>Contact Me</h2>
+
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <p id="msg"></p>
+</section>
+
+<footer>
+    <p>© 2026 Built by Aya JAAFAR </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
