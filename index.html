@@ -1,116 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-  <link rel="stylesheet" href="style.css">
-  <ul id="menu"></ul>
-  <title>Aya JAAFAR</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aya JAAFAR</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="images/png" href="images/ayajaafar.jpeg">
 </head>
 
 <body>
 
-<header>
-    <nav class="navigation">
-        <h2 class="logo">Aya</h2>
+    <!-- HEADER -->
+    <header>
+        <nav class="navigation">
+            <h2 class="logo">Aya</h2>
 
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-        <ul id="menu">
-            <li><a href="#AboutMe">About</a></li>
-            <li><a href="#Skills">Skills</a></li>
-            <li><a href="#Works">Works</a></li>
-            <li><a href="#ContactMe">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+            <ul id="menu">
+                <li><a href="#AboutMe">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Works">Works</a></li>
+                <li><a href="#ContactMe">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text fade-in">
+            <h1>
+                Hi, I'm Aya JAAFAR <br>
+                Web Designer & Future Developer
+            </h1>
 
-<section class="hero">
-    <div class="hero-text">
-        <h1 class="fade-in">
-            Hi, I'm Aya JAAFAR <br>
-            Web Designer & Future Developer
-        </h1>
-
-        <br><br>
-
-        <a href="#ContactMe" class="btn fade-in">Contact Me</a>
-    </div>
-
-    <div class="hero-image fade-in">
-        <img src="images/me offic.jpg" alt="Aya">
-    </div>
-</section>
-
-
-
-<section id="AboutMe" class="AboutMe fade-in">
-    <img src="images/2pro.jpg" alt="Aya">
-    <div>
-        <h2>About Me</h2>
-        <p>
-           My name is Aya JAAFAR, I'm 18 years old, and I'm a passionate Graphic designer currently learning Web Developmen. I love exploring creative ideas and turning them into visually appealing designs. My goal is to combine my design skills with web development to create engaging and interactive digital experiences.
-        </p>
-    </div>
-</section>
-
-
-<section id="Skills" class="Skills fade-in">
-    <h2>My Skills</h2>
-    <br>
-    <div class="cards">  
-        <div class="card">
-            <h3>Graphic Design</h3>
-            <p class="p1">I create unique and professional designs, including logos, posters, and branding materials, to make your ideas stand out and leave a lasting impression.</p>
+            <a href="#ContactMe" class="btn">
+                Contact Me
+            </a>
         </div>
 
-        <div class="card">
-            <h3>Web Development</h3>
-            <p class="p1">I build responsive and user-friendly websites that combine modern design with functionality, ensuring a smooth and engaging experience for every visitor.</p>
+        <div class="hero-image fade-in">
+            <img src="images/ayajaafar.jpeg" alt="Aya">
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="AboutMe" class="AboutMe">
+        <img src="images/aya2.jpeg" alt="Aya">
+
+        <div class="fade-in">
+            <h2>About Me</h2>
+
+            <p>
+                My name is Aya JAAFAR, I'm 18 years old and I'm a passionate Graphic Designer currently learning Web Development.
+                I love exploring creative ideas and turning them into visually appealing designs.
+                My goal is to combine my design skills with web development to create engaging and interactive digital experiences.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="Skills" class="Skills">
+
+        <h2 class="fade-in">My Skills</h2>
+
+        <div class="cards">
+
+            <div class="card fade-in">
+                <h3>Graphic Design</h3>
+
+                <p>
+                    I create unique and professional designs including logos,
+                    posters and branding materials to make your ideas stand out.
+                </p>
+            </div>
+
+            <div class="card fade-in">
+                <h3>Web Development</h3>
+
+                <p>
+                    I build responsive and user-friendly websites using
+                    modern technologies and clean design.
+                </p>
+            </div>
+
+            <div class="card fade-in">
+                <h3>Content Creation</h3>
+
+                <p>
+                    I create engaging digital content for social media
+                    and online platforms to grow your online presence.
+                </p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>Content Creation</h3>
-            <p class="p1">I design engaging digital content for social media and online platforms, helping brands connect with their audience and grow their online presence.</p>
+    </section>
+
+    <!-- WORKS -->
+    <section id="Works" class="Works">
+
+        <h2 class="fade-in">My Works</h2>
+
+        <div class="gallery fade-in">
+
+           
+            <img src="images/baskrtball.jpg" alt="Basketball Design"  >
+
+            <img src="images/bag.jpg" alt="Bugatti Design">
+
+            <img src="images/resteau.jpg" alt="Restaurant Design">
+
         </div>
-    </div>
-</section>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="ContactMe" class="Contact">
+
+        <h2 class="fade-in">Contact Me</h2>
+
+<form onsubmit="sendMessage(event)" class="fade-in">
+
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required>
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required>
+
+    <textarea
+        name="message"
+        placeholder="Your Message"
+        required></textarea>
+
+    <button type="submit">
+        Send
+    </button>
+
+</form>
+
+<p id="msg"></p>
+
+        <p id="msg"></p>
+
+    </section>
+
+    <div class="social-icons">
+    <a href="https://www.instagram.com/jaafa.yaa?igsh=cDdkanZ6bXJxY2lr">
+        <img src="images/insta.png" alt="Instagram">
+    </a>
+
+    <a href="https://github.com/jaafaraya000-lang">
+        <img src="images/github.png" alt="GitHub">
+    </a>
+
+        <a href="https://www.linkedin.com/in/aya-jaafar-7b9b6a405?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+        <img src="images/linkedin.png" alt="GitHub">
+    </a>
+</div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Built by Aya JAAFAR</p>
+    </footer>
 
 
 
-<section id="Works" class="Works fade-in">
-    <h2>My Works</h2>
 
-    <div class="gallery">
-        <img src="images/baskrtball.jpg">
-        <img src="images/bugatti.jpg">
-        <img src="images/resteau.jpg">
-    </div>
-</section>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+emailjs.init("c2adHeBhbHH_7AItD");
+</script>
 
+<script src="index.js"></script>
 
-<section id="ContactMe" class="Contact fade-in">
-    <h2>Contact Me</h2>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <form onsubmit="sendMessage(event)">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-    </form>
+<script>
+emailjs.init("c2adHeBhbHH_7AItD");
+</script>
 
-    <p id="msg"></p>
-</section>
+<script src="index.js"></script>
 
-<footer>
-    <p>© 2026 Built by Aya JAAFAR </p>
-</footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script src="script.js"></script>
+<script>
+    emailjs.init({
+        publicKey: "c2adHeBhbHH_7AItD",
+    });
+</script>
 
+<script src="index.js"></script>
 </body>
+
+</html>
